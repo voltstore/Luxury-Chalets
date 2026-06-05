@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تفاصيل الشاليه — شاليهات الفخامة. مسبح خاص، خصوصية تامة، خدمة 24/7.">
+  <title>تفاصيل الشاليه — شاليهات الفخامة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body data-lang="ar">
+
+<div id="preloader" role="status">
+  <div class="preloader-inner">
+    <div class="preloader-logo">✦ LUXURY</div>
+    <div class="preloader-bar"></div>
+  </div>
+</div>
+
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar" role="navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">✦</div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name" data-i18n="brand.name">شاليهات الفخامة</span>
+          <span class="nav-logo-sub" data-i18n="brand.tagline">Luxury Chalets</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"   class="nav-link" data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="chalets.html" class="nav-link active" data-i18n="nav.chalets">شاليهاتنا</a></li>
+        <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">معرض الصور</a></li>
+        <li><a href="about.html"   class="nav-link" data-i18n="nav.about">من نحن</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="ar">ع</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="theme-toggle" aria-label="تبديل الوضع">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+      <button class="hamburger" aria-label="القائمة"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-drawer">
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"   class="nav-link" data-i18n="nav.home">الرئيسية</a></li>
+      <li><a href="chalets.html" class="nav-link" data-i18n="nav.chalets">شاليهاتنا</a></li>
+      <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">معرض الصور</a></li>
+      <li><a href="about.html"   class="nav-link" data-i18n="nav.about">من نحن</a></li>
+      <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-drawer-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="ar">ع</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HEADER -->
+<section class="page-header" style="height:30vh;min-height:240px" aria-label="تفاصيل الشاليه">
+  <div class="page-header-bg">
+    <img src="https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?w=1600&q=75&auto=format"
+         alt="" loading="eager" width="1600" height="400">
+  </div>
+  <div class="page-header-overlay" aria-hidden="true"></div>
+  <div class="page-header-content">
+    <nav class="breadcrumb" aria-label="مسار التنقل">
+      <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+      <span class="breadcrumb-sep" aria-hidden="true">←</span>
+      <a href="chalets.html" data-i18n="nav.chalets">شاليهاتنا</a>
+      <span class="breadcrumb-sep" aria-hidden="true">←</span>
+      <span class="breadcrumb-current" id="breadcrumb-name">تفاصيل الشاليه</span>
+    </nav>
+    <h1 class="page-header-title" id="breadcrumb-name-h1">تفاصيل الشاليه</h1>
+  </div>
+</section>
+
+<!-- DETAILS — rendered by JS -->
+<section class="section">
+  <div class="container">
+    <div id="chalet-details-root">
+      <!-- Skeleton -->
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:3rem">
+        <div>
+          <div class="skeleton" style="height:460px;border-radius:18px;margin-bottom:6px"></div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">
+            <div class="skeleton" style="height:100px;border-radius:8px"></div>
+            <div class="skeleton" style="height:100px;border-radius:8px"></div>
+            <div class="skeleton" style="height:100px;border-radius:8px"></div>
+            <div class="skeleton" style="height:100px;border-radius:8px"></div>
+          </div>
+        </div>
+        <div class="skeleton" style="height:400px;border-radius:22px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Chalets -->
+<section class="section" style="background:var(--bg-section)">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem">
+      <div>
+        <p class="section-label">شاليهات أخرى</p>
+        <h2 class="section-title">قد يعجبك <span class="gold">أيضاً</span></h2>
+      </div>
+      <a href="chalets.html" class="btn btn-outline">عرض الكل</a>
+    </div>
+    <div class="chalets-grid" id="related-chalets">
+      <div class="skeleton" style="height:380px;border-radius:18px"></div>
+      <div class="skeleton" style="height:380px;border-radius:18px"></div>
+      <div class="skeleton" style="height:380px;border-radius:18px"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER (compact) -->
+<footer class="footer" role="contentinfo" style="padding-top:4rem">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem;padding-bottom:3rem;margin-bottom:2rem;border-bottom:1px solid rgba(201,168,106,0.1)">
+      <div>
+        <p style="font-size:1.1rem;font-weight:800;color:var(--white)" data-i18n="brand.name">شاليهات الفخامة</p>
+        <p style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase" data-i18n="brand.tagline">Luxury Chalets</p>
+      </div>
+      <nav style="display:flex;gap:1.5rem;flex-wrap:wrap" aria-label="روابط سريعة">
+        <a href="index.html"   style="font-size:0.85rem;color:rgba(255,255,255,0.45)" data-i18n="nav.home">الرئيسية</a>
+        <a href="chalets.html" style="font-size:0.85rem;color:rgba(255,255,255,0.45)" data-i18n="nav.chalets">شاليهاتنا</a>
+        <a href="about.html"   style="font-size:0.85rem;color:rgba(255,255,255,0.45)" data-i18n="nav.about">من نحن</a>
+        <a href="contact.html" style="font-size:0.85rem;color:rgba(255,255,255,0.45)" data-i18n="nav.contact">تواصل</a>
+      </nav>
+      <a href="https://wa.me/966599804296" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener" data-wa-default>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        واتساب
+      </a>
+    </div>
+    <div class="footer-bottom" style="padding-top:0;border-top:none">
+      <p class="footer-copyright" data-i18n="footer.copyright">© 2024 شاليهات الفخامة. جميع الحقوق محفوظة.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<div class="whatsapp-float">
+  <div class="whatsapp-tooltip" data-i18n="wa.tooltip">تواصل معنا</div>
+  <a href="https://wa.me/966599804296?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D8%AC%D8%B2%20%D8%B4%D8%A7%D9%84%D9%8A%D9%87"
+     class="whatsapp-btn" target="_blank" rel="noopener" aria-label="واتساب" data-wa-default>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<button class="back-to-top" aria-label="للأعلى">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<div class="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" aria-label="إغلاق">✕</button>
+  <img src="" alt="صورة مكبّرة">
+</div>
+
+<script src="data.js"></script>
+<script src="i18n.js"></script>
+<script src="animations.js"></script>
+<script src="main.js"></script>
+
+<script>
+/* عرض شاليهات مشابهة */
+document.addEventListener('DOMContentLoaded', () => {
+  const related = document.getElementById('related-chalets');
+  if (!related || typeof CHALETS_DATA === 'undefined') return;
+
+  const params = new URLSearchParams(window.location.search);
+  const id     = parseInt(params.get('id')) || 1;
+  const others = CHALETS_DATA.filter(c => c.id !== id).slice(0, 3);
+
+  related.innerHTML = others.map(c => {
+    const lang = document.body.getAttribute('data-lang') || 'ar';
+    const name = lang === 'en' ? c.nameEn : c.nameAr;
+    const loc  = lang === 'en' ? c.locationEn : c.locationAr;
+    return `
+      <article class="chalet-card reveal">
+        <div class="chalet-card-image img-zoom-wrap">
+          <img src="${c.images[0]}" alt="${name}" loading="lazy" width="640" height="400">
+          ${c.badge ? `<span class="chalet-card-badge">${lang === 'en' ? c.badge.en : c.badge.ar}</span>` : ''}
+        </div>
+        <div class="chalet-card-body">
+          <p class="chalet-card-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            ${loc}
+          </p>
+          <h3 class="chalet-card-name">${name}</h3>
+          <div class="chalet-card-footer">
+            <div class="chalet-price">
+              <span class="chalet-price-amount">${c.pricePerNight.toLocaleString('ar-SA')}</span>
+              <span class="chalet-price-unit">${lang === 'en' ? 'SAR / Night' : 'ريال / الليلة'}</span>
+            </div>
+            <a href="chalet-details.html?id=${c.id}" class="btn btn-outline btn-sm">${lang === 'en' ? 'Details' : 'التفاصيل'}</a>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  /* تفعيل reveal للعناصر الجديدة */
+  if (typeof revealObserver !== 'undefined') {
+    related.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  }
+});
+</script>
+</body>
+</html>

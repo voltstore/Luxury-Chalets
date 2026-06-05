@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="شاليهات فاخرة للإيجار في المملكة العربية السعودية — الرياض، جدة، الطائف، أبها. مسابح خاصة، خصوصية تامة، خدمة 24/7. احجز الآن عبر واتساب.">
+  <meta name="keywords" content="شاليه, شاليهات, إيجار شاليه, شاليه فاخر, شاليهات الرياض, شاليهات جدة, حجز شاليه">
+  <meta property="og:title" content="شاليهات الفخامة — تجربة إقامة استثنائية">
+  <meta property="og:description" content="أفخر الشاليهات في المملكة العربية السعودية. مسابح خاصة، خصوصية تامة، خدمة استثنائية.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#C9A86A">
+  <title>شاليهات الفخامة — حيث تبدأ الفخامة</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <style>
+    /* Page-specific tweaks */
+    .hero-min { min-height: 100vh; }
+  </style>
+</head>
+<body data-lang="ar">
+
+<!-- ══════════ PRELOADER ══════════ -->
+<div id="preloader" role="status" aria-label="جاري التحميل">
+  <div class="preloader-inner">
+    <div class="preloader-logo">✦ LUXURY</div>
+    <div style="font-size:0.7rem;color:rgba(201,168,106,0.5);letter-spacing:0.2em;margin-top:0.5rem">شاليهات الفخامة</div>
+    <div class="preloader-bar"></div>
+  </div>
+</div>
+
+<!-- ══════════ SCROLL PROGRESS ══════════ -->
+<div class="scroll-progress" role="progressbar" aria-hidden="true"></div>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<header>
+  <nav class="navbar" role="navigation" aria-label="القائمة الرئيسية">
+    <div class="navbar-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="شاليهات الفخامة - الرئيسية">
+        <div class="nav-logo-icon">✦</div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name" data-i18n="brand.name">شاليهات الفخامة</span>
+          <span class="nav-logo-sub" data-i18n="brand.tagline">Luxury Chalets</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"        class="nav-link active" data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="chalets.html"      class="nav-link"        data-i18n="nav.chalets">شاليهاتنا</a></li>
+        <li><a href="gallery.html"      class="nav-link"        data-i18n="nav.gallery">معرض الصور</a></li>
+        <li><a href="about.html"        class="nav-link"        data-i18n="nav.about">من نحن</a></li>
+        <li><a href="contact.html"      class="nav-link"        data-i18n="nav.contact">تواصل معنا</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <!-- Language Toggle -->
+        <div class="lang-toggle" role="group" aria-label="تبديل اللغة">
+          <button class="lang-btn active" data-lang="ar" aria-label="عربي">ع</button>
+          <button class="lang-btn"        data-lang="en" aria-label="English">EN</button>
+        </div>
+
+        <!-- Dark Mode -->
+        <button class="theme-toggle" aria-label="تبديل الوضع الليلي">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <!-- Book CTA -->
+        <a href="chalets.html" class="btn btn-primary btn-sm btn-ripple" data-i18n="nav.book">احجز الآن</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer" role="dialog" aria-label="القائمة المحمولة">
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"   class="nav-link" data-i18n="nav.home">الرئيسية</a></li>
+      <li><a href="chalets.html" class="nav-link" data-i18n="nav.chalets">شاليهاتنا</a></li>
+      <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">معرض الصور</a></li>
+      <li><a href="about.html"   class="nav-link" data-i18n="nav.about">من نحن</a></li>
+      <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-drawer-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="ar">ع</button>
+        <button class="lang-btn"        data-lang="en">EN</button>
+      </div>
+      <a href="chalets.html" class="btn btn-primary btn-sm btn-ripple" data-i18n="nav.book">احجز الآن</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" aria-label="الرئيسية">
+  <div class="hero-bg">
+    <img
+      src="https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?w=1920&q=90&auto=format"
+      alt="شاليه فاخر مع مسبح في الليل"
+      fetchpriority="high"
+      width="1920" height="1080"
+    >
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-inner">
+
+      <div class="hero-badge">
+        <span class="hero-badge-dot" aria-hidden="true"></span>
+        <span data-i18n="hero.badge">تجربة الإقامة الفاخرة</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span data-i18n="hero.title1">حيث تبدأ</span>
+        <br>
+        <span class="gold hero-title-shimmer" data-i18n="hero.title2">الفخامة</span>
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        شاليهات استثنائية في أرقى مواقع المملكة العربية السعودية — لتجمعاتكم العائلية، مناسباتكم، واسترخاءكم الفاخر
+      </p>
+
+      <div class="hero-cta">
+        <a href="chalets.html" class="btn btn-primary btn-lg btn-ripple" data-i18n="hero.cta1">
+          استكشف الشاليهات
+        </a>
+        <a
+          href="https://wa.me/966599804296?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D8%AC%D8%B2%20%D8%B4%D8%A7%D9%84%D9%8A%D9%87"
+          class="btn btn-whatsapp btn-lg btn-ripple"
+          target="_blank" rel="noopener noreferrer"
+          data-wa-default
+          data-i18n="hero.cta2"
+        >
+          احجز عبر واتساب
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span data-i18n="hero.scroll">تمرير</span>
+  </div>
+</section>
+
+<!-- ══════════ TRUST BAR ══════════ -->
+<section class="trust-bar" aria-label="مزايا الخدمة">
+  <div class="container">
+    <ul class="trust-items stagger" role="list">
+      <li class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v9M8 7l4-4 4 4M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>
+        <span data-i18n="trust.pool">مسابح خاصة</span>
+      </li>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <li class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span data-i18n="trust.privacy">خصوصية تامة</span>
+      </li>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <li class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span data-i18n="trust.service">خدمة 24/7</span>
+      </li>
+      <div class="trust-divider" aria-hidden="true"></div>
+      <li class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-i18n="trust.location">مواقع مميزة</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════ ABOUT INTRO ══════════ -->
+<section class="section" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-intro">
+
+      <!-- Image -->
+      <div class="about-intro-media reveal-left">
+        <img
+          src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=85&auto=format"
+          alt="جلسة خارجية فاخرة في شاليه"
+          loading="lazy"
+          width="800" height="1000"
+        >
+        <div class="about-intro-badge">
+          <span class="about-intro-badge-number">8+</span>
+          <span class="about-intro-badge-label" data-i18n="about.years">سنوات خبرة</span>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="reveal-right" style="display:flex;flex-direction:column;justify-content:center">
+        <p class="section-label" data-i18n="about.label">من نحن</p>
+        <h2 class="section-title" id="about-heading">
+          <span data-i18n="about.title">تجربة إقامة تستحق</span>
+          <br>
+          <span class="gold" data-i18n="about.title2">أن تُعاش</span>
+        </h2>
+        <p class="section-subtitle" style="max-width:100%" data-i18n="about.text">
+          نحن متخصصون في توفير أرقى الشاليهات الفاخرة في المملكة العربية السعودية. منذ أكثر من 8 سنوات ونحن نبني تجارب إقامة لا تُنسى للعائلات والمناسبات الخاصة.
+        </p>
+
+        <ul style="display:flex;flex-direction:column;gap:0.75rem;margin:1.5rem 0 2rem" role="list">
+          <li style="display:flex;align-items:center;gap:0.75rem;color:var(--text-secondary);font-size:0.92rem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            أكثر من 25 شاليه في 5 مدن سعودية
+          </li>
+          <li style="display:flex;align-items:center;gap:0.75rem;color:var(--text-secondary);font-size:0.92rem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            أكثر من 1500 عائلة سعيدة
+          </li>
+          <li style="display:flex;align-items:center;gap:0.75rem;color:var(--text-secondary);font-size:0.92rem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            تقييم 4.9 من 5 على جميع المنصات
+          </li>
+        </ul>
+
+        <a href="about.html" class="btn btn-outline" style="align-self:flex-start" data-i18n="about.cta">اعرف أكثر</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FEATURED CHALETS ══════════ -->
+<section class="section bg-section" style="background:var(--bg-section)" aria-labelledby="featured-heading">
+  <div class="container">
+
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:3rem">
+      <div>
+        <p class="section-label" data-i18n="featured.label">اختياراتنا المميزة</p>
+        <h2 class="section-title" id="featured-heading">
+          <span data-i18n="featured.title1">أبرز</span>
+          <span class="gold" data-i18n="featured.title2"> شاليهاتنا</span>
+        </h2>
+        <p class="section-subtitle" data-i18n="featured.subtitle">اكتشف مجموعتنا المنتقاة من الشاليهات الفاخرة في أرقى مناطق المملكة</p>
+      </div>
+      <a href="chalets.html" class="btn btn-outline" style="flex-shrink:0" data-i18n="featured.viewAll">عرض الكل</a>
+    </div>
+
+    <!-- Cards rendered by JS -->
+    <div class="chalets-grid stagger" id="featured-chalets" role="list" aria-label="أبرز الشاليهات">
+      <!-- Skeleton placeholders -->
+      <div class="skeleton" style="height:420px;border-radius:18px"></div>
+      <div class="skeleton" style="height:420px;border-radius:18px"></div>
+      <div class="skeleton" style="height:420px;border-radius:18px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FEATURES ══════════ -->
+<section class="section" aria-labelledby="features-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3.5rem">
+      <p class="section-label" data-i18n="features.label">لماذا نحن</p>
+      <h2 class="section-title" id="features-heading">
+        <span data-i18n="features.title1">نقدم ما هو</span>
+        <span class="gold" data-i18n="features.title2"> أكثر من إقامة</span>
+      </h2>
+      <p class="section-subtitle" data-i18n="features.subtitle">كل تفصيلة في شاليهاتنا مصممة لتمنحك تجربة استثنائية لا تُنسى</p>
+    </div>
+
+    <div class="features-grid stagger" role="list">
+
+      <article class="feature-card" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 class="feature-title">خصوصية تامة</h3>
+        <p class="feature-desc">كل شاليه بوابة مستقلة وأمن خاص. إقامتك محاطة بالخصوصية الكاملة بعيداً عن أي إزعاج.</p>
+      </article>
+
+      <article class="feature-card" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v9M8 7l4-4 4 4M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 16c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>
+        </div>
+        <h3 class="feature-title">مسابح خاصة</h3>
+        <p class="feature-desc">مسبح خاص دافئ ومعالج كيميائياً بشكل يومي. لأنك تستحق الجودة في كل تفصيلة.</p>
+      </article>
+
+      <article class="feature-card" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="feature-title">خدمة 24/7</h3>
+        <p class="feature-desc">فريقنا متاح على مدار الساعة لضمان راحتك. أي طلب، أي وقت، نحن هنا.</p>
+      </article>
+
+      <article class="feature-card" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="feature-title">مواقع مميزة</h3>
+        <p class="feature-desc">شاليهات في أفضل مواقع المملكة: الرياض، جدة، الطائف، أبها والمدينة المنورة.</p>
+      </article>
+
+      <article class="feature-card" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M3 6h18M3 18h18"/><circle cx="20" cy="6" r="2" fill="currentColor"/></svg>
+        </div>
+        <h3 class="feature-title">نظافة استثنائية</h3>
+        <p class="feature-desc">فريق تنظيف متخصص يعمل قبل وبعد كل إقامة وفق معايير فندقية صارمة.</p>
+      </article>
+
+      <article class="feature-card" role="listitem">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3 class="feature-title">تجهيزات فاخرة</h3>
+        <p class="feature-desc">أثاث مستورد، أجهزة حديثة، ومطابخ مجهزة بأفضل الماركات العالمية.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ STATS ══════════ -->
+<section class="stats-section section-sm" aria-label="إحصائياتنا">
+  <div class="container">
+    <div class="stats-grid" role="list">
+      <div class="stat-item reveal" role="listitem">
+        <div class="stat-number" data-counter="25" aria-label="25 شاليه">0</div>
+        <p class="stat-label" data-i18n="stats.chalets">شاليه فاخر</p>
+      </div>
+      <div class="stat-item reveal" role="listitem" style="transition-delay:0.1s">
+        <div class="stat-number" data-counter="1500" aria-label="1500 عميل">0</div>
+        <p class="stat-label" data-i18n="stats.clients">عميل سعيد</p>
+      </div>
+      <div class="stat-item reveal" role="listitem" style="transition-delay:0.2s">
+        <div class="stat-number" data-counter="8" aria-label="8 سنوات">0</div>
+        <p class="stat-label" data-i18n="stats.years">سنوات خبرة</p>
+      </div>
+      <div class="stat-item reveal" role="listitem" style="transition-delay:0.3s">
+        <div class="stat-number" data-counter="4.9" aria-label="4.9 تقييم">0</div>
+        <p class="stat-label" data-i18n="stats.rating">متوسط التقييم</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ GALLERY PREVIEW ══════════ -->
+<section class="section" aria-label="لمحة من معرض الصور">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <p class="section-label">معرض الصور</p>
+      <h2 class="section-title">لحظات <span class="gold">لا تُنسى</span></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,200px);gap:0.75rem" class="reveal">
+      <div style="grid-column:span 2;grid-row:span 2;border-radius:var(--radius-lg);overflow:hidden" class="img-zoom-wrap">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&auto=format" alt="مسبح فاخر" loading="lazy" width="800" height="400" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="border-radius:var(--radius-md);overflow:hidden" class="img-zoom-wrap">
+        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=400&q=80&auto=format" alt="جلسة خارجية" loading="lazy" width="400" height="200" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="border-radius:var(--radius-md);overflow:hidden" class="img-zoom-wrap">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80&auto=format" alt="غرفة نوم فاخرة" loading="lazy" width="400" height="200" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="border-radius:var(--radius-md);overflow:hidden" class="img-zoom-wrap">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&q=80&auto=format" alt="واجهة شاليه" loading="lazy" width="400" height="200" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="border-radius:var(--radius-md);overflow:hidden" class="img-zoom-wrap">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80&auto=format" alt="حديقة شاليه" loading="lazy" width="400" height="200" style="width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+
+    <div class="text-center" style="margin-top:2rem">
+      <a href="gallery.html" class="btn btn-outline">عرض المعرض الكامل</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section class="section" style="background:var(--bg-section)" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem">
+      <p class="section-label" data-i18n="testimonials.label">آراء عملاءنا</p>
+      <h2 class="section-title" id="testimonials-heading">
+        <span data-i18n="testimonials.title1">ماذا يقول</span>
+        <span class="gold" data-i18n="testimonials.title2"> ضيوفنا</span>
+      </h2>
+      <p class="section-subtitle" data-i18n="testimonials.subtitle">تجارب حقيقية من عملاء يثقون بنا</p>
+    </div>
+
+    <div class="testimonials-slider reveal">
+      <div class="testimonials-track">
+        <!-- Rendered by JS -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">جاري التحميل...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button class="slider-btn slider-btn-prev" aria-label="السابق">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="slider-dots" role="group" aria-label="التنقل بين الشهادات"></div>
+        <button class="slider-btn slider-btn-next" aria-label="التالي">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section class="cta-section section-lg" aria-label="دعوة للحجز">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <p class="section-label text-center" style="justify-content:center">ابدأ تجربتك الآن</p>
+      <h2 class="cta-title">
+        <span data-i18n="cta.title1">جاهز لتجربة</span>
+        <br>
+        <span data-i18n="cta.title2">الفخامة الحقيقية؟</span>
+      </h2>
+      <p class="cta-subtitle" data-i18n="cta.subtitle">
+        تواصل معنا الآن عبر واتساب واحجز شاليهك المثالي — الردّ فوري وسعادتك أولويتنا
+      </p>
+      <div class="cta-btns">
+        <a
+          href="https://wa.me/966599804296?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D8%AC%D8%B2%20%D8%B4%D8%A7%D9%84%D9%8A%D9%87"
+          class="btn btn-whatsapp btn-lg btn-ripple"
+          target="_blank" rel="noopener"
+          data-wa-default
+          data-i18n="cta.btn1"
+        >
+          احجز عبر واتساب
+        </a>
+        <a href="chalets.html" class="btn btn-secondary btn-lg" data-i18n="cta.btn2">
+          استعرض الشاليهات
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div>
+        <p class="footer-brand-name" data-i18n="brand.name">شاليهات الفخامة</p>
+        <p class="footer-brand-tagline" data-i18n="brand.tagline">Luxury Chalets</p>
+        <p class="footer-desc" data-i18n="footer.desc">
+          نوفر أفخر الشاليهات في المملكة العربية السعودية لتجمعاتكم ومناسباتكم الخاصة بخدمة استثنائية على مدار الساعة.
+        </p>
+        <div class="footer-social" role="list" aria-label="وسائل التواصل الاجتماعي">
+          <a href="#" class="social-link" aria-label="إنستغرام">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="تويتر / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://wa.me/966599804296" class="social-link" aria-label="واتساب" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="يوتيوب">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <p class="footer-col-title" data-i18n="footer.links">روابط سريعة</p>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html"   class="footer-link" data-i18n="footer.home">الرئيسية</a></li>
+          <li><a href="chalets.html" class="footer-link" data-i18n="footer.chalets">شاليهاتنا</a></li>
+          <li><a href="gallery.html" class="footer-link" data-i18n="footer.gallery">معرض الصور</a></li>
+          <li><a href="about.html"   class="footer-link" data-i18n="footer.about">من نحن</a></li>
+          <li><a href="contact.html" class="footer-link" data-i18n="footer.contactPage">تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <p class="footer-col-title" data-i18n="footer.services">خدماتنا</p>
+        <ul class="footer-links" role="list">
+          <li><a href="chalets.html" class="footer-link" data-i18n="footer.luxury">شاليهات فاخرة</a></li>
+          <li><a href="contact.html" class="footer-link" data-i18n="footer.events">مناسبات خاصة</a></li>
+          <li><a href="contact.html" class="footer-link" data-i18n="footer.weddings">أعراس وخطوبة</a></li>
+          <li><a href="chalets.html" class="footer-link" data-i18n="footer.family">تجمعات عائلية</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <p class="footer-col-title" data-i18n="footer.contact">التواصل</p>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+966599804296" data-i18n="footer.phone">+966 59 980 4296</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@luxury-chalets.sa" data-i18n="footer.email">info@luxury-chalets.sa</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span data-i18n="footer.address">الرياض، المملكة العربية السعودية</span>
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <a
+          href="https://wa.me/966599804296?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D8%AC%D8%B2%20%D8%B4%D8%A7%D9%84%D9%8A%D9%87"
+          class="btn btn-whatsapp btn-sm"
+          style="margin-top:1rem"
+          target="_blank" rel="noopener"
+          data-wa-default
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n="footer.copyright">
+        © 2024 شاليهات الفخامة. جميع الحقوق محفوظة.
+      </p>
+      <div style="display:flex;gap:1.5rem">
+        <a href="#" style="font-size:0.78rem;color:rgba(255,255,255,0.3)">سياسة الخصوصية</a>
+        <a href="#" style="font-size:0.78rem;color:rgba(255,255,255,0.3)">شروط الاستخدام</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════ WHATSAPP FLOAT ══════════ -->
+<div class="whatsapp-float" role="complementary" aria-label="زر واتساب">
+  <div class="whatsapp-tooltip" aria-hidden="true" data-i18n="wa.tooltip">تواصل معنا</div>
+  <a
+    href="https://wa.me/966599804296?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D8%AC%D8%B2%20%D8%B4%D8%A7%D9%84%D9%8A%D9%87"
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="تواصل معنا عبر واتساب"
+    data-wa-default
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- ══════════ BACK TO TOP ══════════ -->
+<button class="back-to-top" aria-label="العودة للأعلى">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- ══════════ LIGHTBOX ══════════ -->
+<div class="lightbox" role="dialog" aria-label="عرض الصورة" aria-modal="true">
+  <button class="lightbox-close" aria-label="إغلاق">✕</button>
+  <img src="" alt="صورة مكبّرة" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:12px">
+</div>
+
+<!-- Scripts -->
+<script src="data.js"></script>
+<script src="i18n.js"></script>
+<script src="animations.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

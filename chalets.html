@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="استعرض جميع شاليهاتنا الفاخرة في الرياض، جدة، الطائف، أبها والمدينة المنورة. فلتر حسب المدينة والنوع.">
+  <meta property="og:title" content="شاليهاتنا الفاخرة — شاليهات الفخامة">
+  <title>شاليهاتنا — شاليهات الفخامة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body data-lang="ar">
+
+<div id="preloader" role="status" aria-label="جاري التحميل">
+  <div class="preloader-inner">
+    <div class="preloader-logo">✦ LUXURY</div>
+    <div style="font-size:0.7rem;color:rgba(201,168,106,0.5);letter-spacing:0.2em;margin-top:0.5rem">شاليهات الفخامة</div>
+    <div class="preloader-bar"></div>
+  </div>
+</div>
+
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar" role="navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo" aria-label="الرئيسية">
+        <div class="nav-logo-icon">✦</div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name" data-i18n="brand.name">شاليهات الفخامة</span>
+          <span class="nav-logo-sub" data-i18n="brand.tagline">Luxury Chalets</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"   class="nav-link" data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="chalets.html" class="nav-link active" data-i18n="nav.chalets">شاليهاتنا</a></li>
+        <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">معرض الصور</a></li>
+        <li><a href="about.html"   class="nav-link" data-i18n="nav.about">من نحن</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="ar">ع</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="theme-toggle" aria-label="تبديل الوضع">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm btn-ripple" data-i18n="nav.book">احجز الآن</a>
+      </div>
+      <button class="hamburger" aria-label="القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-drawer">
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"   class="nav-link" data-i18n="nav.home">الرئيسية</a></li>
+      <li><a href="chalets.html" class="nav-link" data-i18n="nav.chalets">شاليهاتنا</a></li>
+      <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">معرض الصور</a></li>
+      <li><a href="about.html"   class="nav-link" data-i18n="nav.about">من نحن</a></li>
+      <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-drawer-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="ar">ع</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.book">احجز الآن</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HEADER -->
+<section class="page-header" aria-label="شاليهاتنا">
+  <div class="page-header-bg">
+    <img
+      src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80&auto=format"
+      alt="شاليهاتنا الفاخرة"
+      loading="eager"
+      width="1600" height="500"
+    >
+  </div>
+  <div class="page-header-overlay" aria-hidden="true"></div>
+  <div class="page-header-content">
+    <nav class="breadcrumb" aria-label="مسار التنقل">
+      <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+      <span class="breadcrumb-sep" aria-hidden="true">←</span>
+      <span class="breadcrumb-current" data-i18n="nav.chalets">شاليهاتنا</span>
+    </nav>
+    <h1 class="page-header-title" data-i18n="chalets.title">شاليهاتنا الفاخرة</h1>
+  </div>
+</section>
+
+<!-- CHALETS SECTION -->
+<section class="section">
+  <div class="container">
+
+    <div class="text-center reveal" style="margin-bottom:2.5rem">
+      <p class="section-subtitle" data-i18n="chalets.subtitle">اكتشف مجموعتنا الكاملة من الشاليهات في أرقى مناطق المملكة</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar reveal">
+
+      <!-- City Filter -->
+      <div class="filter-row" style="margin-bottom:0.75rem">
+        <span class="filter-label" data-i18n="filter.city">المدينة:</span>
+        <div class="filter-chips city-filter" role="group" aria-label="فلتر المدينة">
+          <button class="filter-chip active" data-city="all" data-i18n="filter.all">الكل</button>
+          <button class="filter-chip" data-city="الرياض" data-i18n="filter.riyadh">الرياض</button>
+          <button class="filter-chip" data-city="جدة" data-i18n="filter.jeddah">جدة</button>
+          <button class="filter-chip" data-city="الطائف" data-i18n="filter.taif">الطائف</button>
+          <button class="filter-chip" data-city="أبها" data-i18n="filter.abha">أبها</button>
+          <button class="filter-chip" data-city="المدينة" data-i18n="filter.madinah">المدينة</button>
+        </div>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="filter-row">
+        <span class="filter-label" data-i18n="filter.type">النوع:</span>
+        <div class="filter-chips cat-filter" role="group" aria-label="فلتر النوع">
+          <button class="filter-chip active" data-cat="all" data-i18n="filter.all">الكل</button>
+          <button class="filter-chip" data-cat="luxury" data-i18n="filter.luxury">فاخر</button>
+          <button class="filter-chip" data-cat="beachfront" data-i18n="filter.beach">بحري</button>
+          <button class="filter-chip" data-cat="mountain" data-i18n="filter.mountain">جبلي</button>
+          <button class="filter-chip" data-cat="family" data-i18n="filter.family">عائلي</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chalets Grid — rendered by JS -->
+    <div class="chalets-grid" id="all-chalets" role="list" aria-label="قائمة الشاليهات">
+      <!-- Skeleton -->
+      <div class="skeleton" style="height:420px;border-radius:18px"></div>
+      <div class="skeleton" style="height:420px;border-radius:18px"></div>
+      <div class="skeleton" style="height:420px;border-radius:18px"></div>
+      <div class="skeleton" style="height:420px;border-radius:18px"></div>
+      <div class="skeleton" style="height:420px;border-radius:18px"></div>
+      <div class="skeleton" style="height:420px;border-radius:18px"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section section" aria-label="دعوة للحجز">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2 class="cta-title">
+        <span data-i18n="cta.title1">جاهز لتجربة</span>
+        <br><span data-i18n="cta.title2">الفخامة الحقيقية؟</span>
+      </h2>
+      <p class="cta-subtitle" data-i18n="cta.subtitle">تواصل معنا الآن عبر واتساب واحجز شاليهك المثالي</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/966599804296?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D8%AC%D8%B2%20%D8%B4%D8%A7%D9%84%D9%8A%D9%87"
+           class="btn btn-whatsapp btn-lg btn-ripple" target="_blank" rel="noopener" data-wa-default data-i18n="cta.btn1">
+          احجز عبر واتساب
+        </a>
+        <a href="contact.html" class="btn btn-secondary btn-lg" data-i18n="nav.contact">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand-name" data-i18n="brand.name">شاليهات الفخامة</p>
+        <p class="footer-brand-tagline" data-i18n="brand.tagline">Luxury Chalets</p>
+        <p class="footer-desc" data-i18n="footer.desc">نوفر أفخر الشاليهات في المملكة العربية السعودية.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="إنستغرام"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://wa.me/966599804296" class="social-link" aria-label="واتساب" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title" data-i18n="footer.links">روابط سريعة</p>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link" data-i18n="footer.home">الرئيسية</a></li>
+          <li><a href="chalets.html" class="footer-link" data-i18n="footer.chalets">شاليهاتنا</a></li>
+          <li><a href="gallery.html" class="footer-link" data-i18n="footer.gallery">معرض الصور</a></li>
+          <li><a href="about.html" class="footer-link" data-i18n="footer.about">من نحن</a></li>
+          <li><a href="contact.html" class="footer-link" data-i18n="footer.contactPage">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title" data-i18n="footer.services">خدماتنا</p>
+        <ul class="footer-links">
+          <li><a href="chalets.html" class="footer-link" data-i18n="footer.luxury">شاليهات فاخرة</a></li>
+          <li><a href="contact.html" class="footer-link" data-i18n="footer.events">مناسبات خاصة</a></li>
+          <li><a href="contact.html" class="footer-link" data-i18n="footer.weddings">أعراس وخطوبة</a></li>
+          <li><a href="chalets.html" class="footer-link" data-i18n="footer.family">تجمعات عائلية</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title" data-i18n="footer.contact">التواصل</p>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+966599804296" data-i18n="footer.phone">+966 59 980 4296</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@luxury-chalets.sa" data-i18n="footer.email">info@luxury-chalets.sa</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n="footer.copyright">© 2024 شاليهات الفخامة. جميع الحقوق محفوظة.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<div class="whatsapp-float">
+  <div class="whatsapp-tooltip" data-i18n="wa.tooltip">تواصل معنا</div>
+  <a href="https://wa.me/966599804296?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D8%AC%D8%B2%20%D8%B4%D8%A7%D9%84%D9%8A%D9%87"
+     class="whatsapp-btn" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب" data-wa-default>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<button class="back-to-top" aria-label="العودة للأعلى">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<div class="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" aria-label="إغلاق">✕</button>
+  <img src="" alt="صورة مكبّرة">
+</div>
+
+<script src="data.js"></script>
+<script src="i18n.js"></script>
+<script src="animations.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
