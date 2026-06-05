@@ -1,0 +1,300 @@
+/* ============================================================
+   RESPONSIVE.CSS — التجاوب الكامل | موقع شاليهات
+   ============================================================ */
+
+/* ══════════════════════════════════════════════
+   TABLET: 768px – 1023px
+   ══════════════════════════════════════════════ */
+@media (max-width: 1023px) {
+
+  :root {
+    --nav-h: 70px;
+    --space-32: 6rem;
+    --space-24: 5rem;
+  }
+
+  .container { padding: 0 var(--space-6); }
+
+  /* Nav */
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .nav-actions .btn { display: none; }
+
+  /* Grids */
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+  /* Features */
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Stats */
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  /* About intro */
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .about-intro-media { max-width: 480px; margin: 0 auto; }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .contact-info-card { position: static; }
+
+  /* Gallery */
+  .gallery-grid { columns: 2; }
+
+  /* Chalet details */
+  .details-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .booking-card { position: static; }
+
+  /* Details thumbs */
+  .details-thumbs { grid-template-columns: repeat(4, 1fr); }
+
+  /* Amenities */
+  .amenities-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Hero */
+  .hero-inner { max-width: 100%; }
+
+  /* Trust bar */
+  .trust-items { gap: var(--space-5); }
+  .trust-divider { display: none; }
+
+  /* Testimonials */
+  .testimonial-card { padding: var(--space-8); }
+}
+
+/* ══════════════════════════════════════════════
+   MOBILE: < 768px
+   ══════════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+  :root {
+    --nav-h: 64px;
+    --space-32: 4rem;
+    --space-24: 3.5rem;
+    --space-20: 3rem;
+    --space-16: 2.5rem;
+  }
+
+  .container { padding: 0 var(--space-5); }
+
+  /* Nav */
+  .nav-logo-text { display: none; }
+  .theme-toggle { display: none; }
+
+  /* Hero */
+  .hero-title { line-height: 1.12; }
+  .hero-inner { padding: var(--space-24) 0 var(--space-20); }
+  .hero-cta { flex-direction: column; align-items: flex-start; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+
+  body[data-lang="en"] .hero-cta { align-items: flex-start; }
+
+  .hero-scroll { display: none; }
+
+  /* Trust bar */
+  .trust-items {
+    flex-direction: column;
+    gap: var(--space-4);
+    align-items: flex-start;
+    padding: 0 var(--space-5);
+  }
+
+  /* Section */
+  .section { padding: var(--space-16) 0; }
+  .section-lg { padding: var(--space-20) 0; }
+
+  /* Grids */
+  .grid-2,
+  .grid-3,
+  .grid-4 { grid-template-columns: 1fr; }
+
+  /* Chalets grid */
+  .chalets-grid { grid-template-columns: 1fr; }
+
+  /* Features */
+  .features-grid { grid-template-columns: 1fr; }
+
+  /* Stats */
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-item { padding: var(--space-8) var(--space-5); }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-desc { max-width: 100%; }
+
+  /* Gallery */
+  .gallery-grid { columns: 2; column-gap: var(--space-3); }
+
+  /* Gallery filter */
+  .filter-row { flex-direction: column; align-items: flex-start; }
+
+  /* Testimonial */
+  .testimonial-card {
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+  }
+
+  .testimonial-quote { display: none; }
+
+  /* CTA */
+  .cta-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-btns .btn { width: 100%; max-width: 320px; }
+
+  /* Contact grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  /* Chalet details */
+  .details-thumbs { grid-template-columns: repeat(4, 1fr); gap: 4px; }
+
+  .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* WhatsApp float */
+  .whatsapp-float {
+    bottom: var(--space-5);
+    left: var(--space-5);
+  }
+
+  body[data-lang="en"] .whatsapp-float {
+    left: auto;
+    right: var(--space-5);
+  }
+
+  .whatsapp-btn { width: 52px; height: 52px; }
+  .whatsapp-tooltip { display: none; }
+
+  /* Page header */
+  .page-header { height: 35vh; min-height: 260px; }
+
+  /* Preloader */
+  .preloader-logo { font-size: 2rem; }
+}
+
+/* ══════════════════════════════════════════════
+   SMALL MOBILE: < 480px
+   ══════════════════════════════════════════════ */
+@media (max-width: 479px) {
+
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+
+  .gallery-grid { columns: 1; }
+
+  .details-thumbs { grid-template-columns: repeat(3, 1fr); }
+
+  .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .hero-badge { font-size: 0.68rem; }
+}
+
+/* ══════════════════════════════════════════════
+   LARGE DESKTOP: > 1440px
+   ══════════════════════════════════════════════ */
+@media (min-width: 1440px) {
+  :root {
+    --container: 1380px;
+    --space-32: 10rem;
+    --space-24: 8rem;
+  }
+
+  .features-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ══════════════════════════════════════════════
+   RTL SPECIFIC FIXES
+   ══════════════════════════════════════════════ */
+
+/* Star ratings align correctly in RTL */
+body[data-lang="ar"] .stars { direction: ltr; display: inline-block; }
+
+/* Slider controls direction in RTL */
+body[data-lang="ar"] .slider-btn-next svg {
+  transform: scaleX(-1);
+}
+
+body[data-lang="ar"] .slider-btn-prev svg {
+  transform: scaleX(-1);
+}
+
+/* Form selects RTL arrow */
+body[data-lang="ar"] .form-select {
+  padding-right: 1rem;
+  padding-left: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%238896A8'%3E%3Cpath d='M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 0.75rem center;
+  background-size: 18px;
+}
+
+/* Nav logo in RTL */
+body[data-lang="ar"] .nav-actions { flex-direction: row-reverse; }
+
+/* Footer in RTL */
+body[data-lang="ar"] .footer-social { flex-direction: row; }
+
+/* ══════════════════════════════════════════════
+   REDUCED MOTION
+   ══════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero-bg img { animation: none; }
+  .reveal, .reveal-left, .reveal-right { opacity: 1; transform: none; }
+  .stagger > * { opacity: 1; transform: none; }
+  .whatsapp-btn::before { animation: none; }
+  .hero-scroll-line { animation: none; }
+  .preloader-bar::after { animation: none; width: 100%; }
+}
+
+/* ══════════════════════════════════════════════
+   PRINT
+   ══════════════════════════════════════════════ */
+@media print {
+  .navbar,
+  .whatsapp-float,
+  #preloader { display: none !important; }
+
+  body { background: white; color: black; }
+
+  .hero { min-height: auto; }
+  .page-header { height: auto; }
+}

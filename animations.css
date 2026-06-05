@@ -1,0 +1,587 @@
+/* ============================================================
+   ANIMATIONS.CSS — Emil Design Engineering Principles
+   Premium Motion System | موقع شاليهات
+   ============================================================ */
+
+/* ══════════════════════════════════════════════
+   EASING LIBRARY
+   ══════════════════════════════════════════════ */
+:root {
+  /* Standard curves (Emil Kowalski) */
+  --ease-standard:  cubic-bezier(0.4, 0.0, 0.2, 1);   /* in-out */
+  --ease-decel:     cubic-bezier(0.0, 0.0, 0.2, 1);   /* ease-out (elements entering) */
+  --ease-accel:     cubic-bezier(0.4, 0.0, 1.0, 1);   /* ease-in (elements leaving) */
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1); /* slight overshoot = spring feel */
+  --ease-expo-out:  cubic-bezier(0.16, 1, 0.3, 1);    /* very fast start, slow end */
+
+  /* Duration tokens */
+  --dur-instant:  80ms;
+  --dur-fast:     150ms;
+  --dur-normal:   280ms;
+  --dur-slow:     450ms;
+  --dur-slower:   650ms;
+  --dur-page:     350ms;
+}
+
+/* ══════════════════════════════════════════════
+   PAGE TRANSITION
+   ══════════════════════════════════════════════ */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--dark);
+  z-index: 9998;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform var(--dur-page) var(--ease-accel);
+  pointer-events: none;
+}
+
+.page-transition.entering {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform var(--dur-page) var(--ease-accel);
+}
+
+.page-transition.leaving {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--dur-page) var(--ease-decel);
+}
+
+/* ══════════════════════════════════════════════
+   BUTTON INTERACTIONS (Emil principles)
+   GPU-only: transform + opacity, no layout props
+   ══════════════════════════════════════════════ */
+
+/* Ripple on click */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  transform: scale(0);
+  animation: rippleExpand var(--dur-slow) var(--ease-decel) forwards;
+  pointer-events: none;
+}
+
+@keyframes rippleExpand {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   SCROLL-REVEAL KEYFRAMES
+   ══════════════════════════════════════════════ */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealScale {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes revealFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ══════════════════════════════════════════════
+   CARD HOVER — shadow trick (avoid layout)
+   Instead of animating box-shadow, animate
+   a pseudo-element's opacity.
+   ══════════════════════════════════════════════ */
+.card-hover-shadow {
+  position: relative;
+}
+
+.card-hover-shadow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.20);
+  opacity: 0;
+  transition: opacity var(--dur-normal) var(--ease-standard);
+  pointer-events: none;
+}
+
+.card-hover-shadow:hover::after { opacity: 1; }
+
+/* ══════════════════════════════════════════════
+   TOOLTIP / POPOVER ANIMATION
+   In: 150ms, Out: 80ms (faster exit = snappy)
+   ══════════════════════════════════════════════ */
+.tooltip-enter {
+  animation: tooltipIn var(--dur-fast) var(--ease-decel) both;
+  transform-origin: bottom center;
+}
+
+.tooltip-exit {
+  animation: tooltipOut var(--dur-instant) var(--ease-accel) both;
+}
+
+@keyframes tooltipIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes tooltipOut {
+  to {
+    opacity: 0;
+    transform: scale(0.92) translateY(4px);
+  }
+}
+
+/* ══════════════════════════════════════════════
+   DRAWER / MODAL ANIMATION
+   ══════════════════════════════════════════════ */
+@keyframes drawerSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes drawerSlideOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ══════════════════════════════════════════════
+   HERO ELEMENTS
+   ══════════════════════════════════════════════ */
+@keyframes heroEntrance {
+  0%   { opacity: 0; transform: translateY(40px) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes heroBadgeIn {
+  0%   { opacity: 0; transform: translateY(-16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Gold shimmer on hero title */
+@keyframes goldShimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.hero-title-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold-dark) 0%,
+    var(--gold-light) 40%,
+    var(--gold) 50%,
+    var(--gold-light) 60%,
+    var(--gold-dark) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 4s linear infinite;
+}
+
+/* ══════════════════════════════════════════════
+   NUMBER COUNTER
+   ══════════════════════════════════════════════ */
+.counter-num {
+  display: inline-block;
+  transition: none;
+}
+
+/* ══════════════════════════════════════════════
+   IMAGE ZOOM (GPU only via transform)
+   ══════════════════════════════════════════════ */
+.img-zoom-wrap {
+  overflow: hidden;
+  /* isolate the stacking context */
+  isolation: isolate;
+}
+
+.img-zoom-wrap img {
+  transition: transform var(--dur-slower) var(--ease-standard);
+  will-change: transform;
+}
+
+.img-zoom-wrap:hover img {
+  transform: scale(1.07);
+}
+
+/* ══════════════════════════════════════════════
+   SKELETON LOADING
+   ══════════════════════════════════════════════ */
+@keyframes skeletonShimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-section) 25%,
+    var(--cream-dark) 50%,
+    var(--bg-section) 75%
+  );
+  background-size: 1200px 100%;
+  animation: skeletonShimmer 1.6s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+[data-theme="dark"] .skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.04) 25%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0.04) 75%
+  );
+  background-size: 1200px 100%;
+}
+
+/* ══════════════════════════════════════════════
+   NAV LINK UNDERLINE (clip-path reveal)
+   ══════════════════════════════════════════════ */
+.nav-link-clip {
+  position: relative;
+}
+
+.nav-link-clip::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: var(--gold);
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--dur-normal) var(--ease-expo-out);
+}
+
+.nav-link-clip:hover::before {
+  clip-path: inset(0 0% 0 0);
+}
+
+/* ══════════════════════════════════════════════
+   FLOATING LABEL FORM ANIMATION
+   ══════════════════════════════════════════════ */
+.form-group-float {
+  position: relative;
+}
+
+.form-group-float .form-label {
+  position: absolute;
+  top: 0.875rem;
+  right: 1rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  transition:
+    top var(--dur-fast) var(--ease-standard),
+    font-size var(--dur-fast) var(--ease-standard),
+    color var(--dur-fast) var(--ease-standard);
+}
+
+body[data-lang="en"] .form-group-float .form-label {
+  right: auto;
+  left: 1rem;
+}
+
+.form-group-float .form-input:focus ~ .form-label,
+.form-group-float .form-input:not(:placeholder-shown) ~ .form-label {
+  top: -0.5rem;
+  font-size: 0.72rem;
+  color: var(--gold);
+  background: var(--bg-card);
+  padding: 0 4px;
+}
+
+/* ══════════════════════════════════════════════
+   CHALET CARD IMAGE OVERLAY
+   (clip-path instead of opacity for richer feel)
+   ══════════════════════════════════════════════ */
+.card-img-reveal {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8,12,16,0.8) 0%,
+    rgba(8,12,16,0.3) 40%,
+    transparent 70%
+  );
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path var(--dur-slow) var(--ease-decel);
+}
+
+.chalet-card:hover .card-img-reveal {
+  clip-path: inset(0% 0 0 0);
+}
+
+/* ══════════════════════════════════════════════
+   PARALLAX SUPPORT CLASS
+   Applied by JS for parallax effect
+   ══════════════════════════════════════════════ */
+.parallax-layer {
+  will-change: transform;
+  transition: transform 0ms linear;
+}
+
+/* ══════════════════════════════════════════════
+   STAR RATING FILL ANIMATION
+   ══════════════════════════════════════════════ */
+@keyframes starFill {
+  from { transform: scale(0) rotate(-30deg); opacity: 0; }
+  to   { transform: scale(1) rotate(0deg);  opacity: 1; }
+}
+
+.star-animated {
+  display: inline-block;
+  animation: starFill 0.3s var(--ease-spring) both;
+}
+
+.star-animated:nth-child(1) { animation-delay: 0ms; }
+.star-animated:nth-child(2) { animation-delay: 60ms; }
+.star-animated:nth-child(3) { animation-delay: 120ms; }
+.star-animated:nth-child(4) { animation-delay: 180ms; }
+.star-animated:nth-child(5) { animation-delay: 240ms; }
+
+/* ══════════════════════════════════════════════
+   SCROLL PROGRESS BAR
+   ══════════════════════════════════════════════ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold-dark), var(--gold), var(--gold-light));
+  z-index: 1001;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+body[data-lang="en"] .scroll-progress { left: 0; right: auto; }
+
+/* ══════════════════════════════════════════════
+   FILTER CHIP ACTIVE TRANSITION
+   ══════════════════════════════════════════════ */
+.filter-chip {
+  transition:
+    background var(--dur-fast) var(--ease-standard),
+    border-color var(--dur-fast) var(--ease-standard),
+    color var(--dur-fast) var(--ease-standard),
+    transform var(--dur-fast) var(--ease-spring);
+}
+
+/* ══════════════════════════════════════════════
+   TESTIMONIALS FADE
+   ══════════════════════════════════════════════ */
+.testimonial-slide {
+  transition: opacity var(--dur-normal) var(--ease-standard);
+}
+
+.testimonial-slide.hidden { opacity: 0; pointer-events: none; }
+
+/* ══════════════════════════════════════════════
+   WHATSAPP PULSE RINGS (two rings for depth)
+   ══════════════════════════════════════════════ */
+.whatsapp-btn::before,
+.whatsapp-btn::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(37,211,102,0.5);
+}
+
+.whatsapp-btn::before {
+  animation: wpPulse1 2.5s ease-out infinite;
+}
+
+.whatsapp-btn::after {
+  animation: wpPulse2 2.5s 0.8s ease-out infinite;
+}
+
+@keyframes wpPulse1 {
+  0%   { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 0;   transform: scale(1.7); }
+}
+
+@keyframes wpPulse2 {
+  0%   { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 0;   transform: scale(1.9); }
+}
+
+/* ══════════════════════════════════════════════
+   SECTION DIVIDER ANIMATION
+   ══════════════════════════════════════════════ */
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.animated-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  transform-origin: left;
+  animation: lineGrow 1s var(--ease-expo-out) both;
+}
+
+/* ══════════════════════════════════════════════
+   LOGO ENTRANCE
+   ══════════════════════════════════════════════ */
+@keyframes logoEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-logo {
+  animation: logoEntrance var(--dur-normal) var(--ease-decel) both;
+}
+
+/* ══════════════════════════════════════════════
+   BACK TO TOP BUTTON
+   ══════════════════════════════════════════════ */
+.back-to-top {
+  position: fixed;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  z-index: 890;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--dark);
+  border: 1.5px solid rgba(201,168,106,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--dur-normal) var(--ease-standard),
+    transform var(--dur-normal) var(--ease-spring),
+    background var(--dur-fast),
+    border-color var(--dur-fast);
+  pointer-events: none;
+}
+
+body[data-lang="ar"] .back-to-top {
+  right: auto;
+  left: var(--space-8);
+  bottom: calc(var(--space-8) + 70px);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--dark);
+  transform: translateY(-3px);
+}
+
+/* ══════════════════════════════════════════════
+   GALLERY FILTER TRANSITION
+   ══════════════════════════════════════════════ */
+.gallery-item.filter-hide {
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity var(--dur-normal) var(--ease-standard),
+    transform var(--dur-normal) var(--ease-standard);
+  pointer-events: none;
+}
+
+.gallery-item.filter-show {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity var(--dur-normal) var(--ease-decel),
+    transform var(--dur-normal) var(--ease-decel);
+}
+
+/* ══════════════════════════════════════════════
+   ABOUT PAGE — VALUE CARDS
+   ══════════════════════════════════════════════ */
+@keyframes valueCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
